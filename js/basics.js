@@ -279,7 +279,7 @@ if (apartment.hasOwnProperty(key)) {
  */
 
 
-
+/* 
 const apartment = {
   descr: "Spacious apartment in the city center",
   rating: 4,
@@ -293,3 +293,23 @@ for (key of keys) {
       values.push(apartment[key]);
   }
 }
+
+ */
+
+
+function countProps(object) {
+  // Change code below this line
+  let propCount = 0;
+  const keys = object.keys(object)
+  
+  for (const key of keys) {
+    if (object.hasOwnProperty(key)) {
+      propCount += 1;
+    }
+  }
+
+  return propCount;
+  // Change code above this line
+}
+
+console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 })) 
